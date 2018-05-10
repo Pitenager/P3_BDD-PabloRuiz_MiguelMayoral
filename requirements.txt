@@ -1,0 +1,8 @@
+nose
+coverage
+mock
+selenium
+lettuce
+django==2.0.5
+aloe
+aloe_django

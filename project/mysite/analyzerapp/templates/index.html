@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+    $(document).ready(function() {
+        $("#reset").click(function(e) {
+            e.preventDefault();
+            $("#id_my_text").val('');
+        });
+    });
+    </script>
+</head>
+<body>
+<h1>WELCOME TO THE TEXT ANALYZER !!</h1>
+<form action="/index/" method="post">
+    {% csrf_token %}
+    {{ form }}<br><br>
+    <input type="button" value="Reset" id="reset" name="reset"/>
+    <input type="submit" value="Execute" id="analyze" name="analyze"/>
+</form> <br><br>
+<div class="resultado" id="resultado">
+    {% if form.my_text.value != '' %}
+
+    {%for value in mytext %}
+    <li>{{value}}</li>
+    {% endfor %}
+{% endif %}
+</div>
+
+</body>
+</html>
