@@ -1,6 +1,6 @@
 # P3-PabloRuiz_MiguelMayoral
 
-Pratice 3 for Verificación y Desarrollo (TDD module)
+Pratice 3 for Verificación y Desarrollo (BDD module)
 
 ## Python Version
 
