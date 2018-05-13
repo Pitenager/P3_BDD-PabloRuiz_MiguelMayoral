@@ -2,7 +2,7 @@
 
 import unittest
 from ..text_analyzer.text_analyzer import TextAnalyzer
-from urllib.error import URLError
+#from urllib.error import URLError
 
 class TestTextAnalyzer(unittest.TestCase):
     def test_string_lower_string_capitalized(self):
@@ -132,16 +132,17 @@ class TestTextAnalyzer(unittest.TestCase):
         TextAnalyzer.analyze(analyzer,text)
         assert analyzer.palabras_leidas['hola']==3 and analyzer.palabras_leidas['adios']==1
 
+'''
     def test_invalid_URL(self):
         analyzer = TextAnalyzer()
         url = 345
         self.assertRaises(URLError, analyzer.get_text,url)
-
+        
     def unexistent_url(self):
         analyzer = TextAnalyzer()
         url = "https://www.auhfaiguisgfa.com"
         self.assertRaises(URLError, analyzer.get_text,url)
-
+'''
 
 if __name__ == '__main__':
     unittest.main()

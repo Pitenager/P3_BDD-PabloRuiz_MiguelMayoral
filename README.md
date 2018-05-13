@@ -14,11 +14,17 @@ You can install the dependencies using:
 make bootstrap
 ```
 
-And execute the tests with:
+And execute test by 2 methods once you are in folder /tests (/project/mysite/analyzerapp/tests):
 
 ```bash
-make test
+aloe features/tests.feature
 ```
+This is to run all the selenium + aloe test automatically.
+But you can execute the tests one by one by doing:
+```bash
+aloe features/name_of_the_feature.feature
+```
+You can find the names of the features into the /test folder.
 
 You can execute the program using the next command from the directory where manage.py is located (P3_BDD-PabloRuiz_MiguelMayoral/project/mysite):
 
